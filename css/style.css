@@ -1,0 +1,280 @@
+/* BASE STYLE- OGOLNE STYLE */
+
+* {
+    box-sizing: border-box;
+}
+
+/* fonty, które ściągałem z google fonts */
+
+body {
+    font-family: 'Open sans', sans-serif;
+}
+
+/* hr jest w sekcji ogolnej, bo za kazdym razem bedzie taki sam */
+
+hr {
+    width: 200px;
+    border: 5px solid #007bff;
+    /* zeby ramka była cieńsza */
+    border-bottom: 0;
+}
+
+section {
+    padding: 120px 0;
+}
+
+.section-header {
+    margin-bottom: 75px;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 1.9em;
+    /* tekst na środku */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.opis {
+    letter-spacing: 3px;
+    font-size: large;
+    background-color: whitesmoke;
+}
+
+.btn {
+    /* aby nie było podkreślenia (przeglądarki same go dodają) */
+    text-decoration: none;
+    /* wielkie litery */
+    text-transform: uppercase;
+    color: whitesmoke;
+    border: 1px solid #007bff;
+    padding: 10px 15px;
+    /* aby po najechaniu zmieniał się napis */
+    transition: all 0.3;
+    /* powoduje, ze jest odstep pod paragrafami w sekcji 'o mnie' */
+    display: inline-block;
+    margin: auto;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    /* na te kolory zmieni się po najechaniu na 'DOWIEDZ SIĘ WIĘCEJ ' */
+    color: #fff;
+    background-color: #007bff;
+}
+
+.container {
+    /* maksymalna szerokość na stronie */
+    max-width: 1170px;
+    /* automatyczny margines lewy prawy */
+    margin: 0 auto;
+}
+
+/* HEADER STYLES */
+
+/* main-header to odwołanie do nagłówka header w html */
+
+.main-header {
+    height: 70vh;
+    /* dwie kropki aby wyjść folder wyzej */
+    background-image: url(../img/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* ustawienie tekstu na środku header.jpg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  */
+
+.main-header .main-header-content {
+    text-align: center;
+}
+
+.main-header .main-header-content h1 {
+    /* wielkość napisu 'KAAB', czyli h1 */
+    font-size: 6em;
+    color: whitesmoke;
+    /* powoduje, ze napis zawsze bedzie z wielkiej litery */
+    text-transform: uppercase;
+    /* zdejmuje margines z napisu 'KAAB', dzieki czemu linia hr bedzie przylegała */
+    margin: 0;
+    /* wazne- odstep miedzy literami w slowie KAAB */
+    letter-spacing: 8px;
+    transition: all 1s ease-in;
+    text-shadow: #fff;
+}
+
+.main-header .main-header-content p {
+    color: #333;
+    /* wielkość napisu etykie, druki itd.. */
+    font-size: 1.7em;
+    /* margines góra 40px, lewy prawy 0 */
+    margin: 40px 0;
+}
+
+.main-header .main-header-content p span {
+    color: #007bff;
+}
+
+/* MENU STYLES - niebieski pasek */
+
+.main-menu {
+    background-color: #007bff;
+}
+
+.main-menu ul {
+    /* margin 0 sprawia,ze nie ma przerwy miedzy sekcja header a niebieskim paskiem z menu */
+    margin: 0;
+    /* padding to margines wewnetrzny w ramach elementu */
+    padding: 10px 0;
+    /* wyśrodkowanie tekstu - wazne! */
+    text-align: center;
+}
+
+.main-menu ul .menu-item {
+    /* wyswietlanie liniowo blokowe - czyli w poziomie! wazne! */
+    display: inline-block;
+    /* margines w poziomie między słowami 10 px */
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+.main-menu ul .menu-item a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 20px;
+    /* display block aby rozepchało góra i dół */
+    display: block;
+    transition: all .3s;
+}
+
+.main-menu ul .menu-item a:hover {
+    color: #007bff;
+    background-color: #fff;
+}
+
+/* SECTION STYLES */
+
+.about {
+    /* wyśrodkowuje */
+    text-align: center;
+}
+
+.about .about-img {
+    /* zaokrąglenie obrazka */
+    border-radius: 50%;
+    /* zmiana rozmiaru zdjecia */
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.about p {
+    /* maksymalna szerokość  */
+    max-width: 700px;
+    /* odstępy: górny prawy, dolny lewy */
+    margin: 40px auto 30px auto;
+    color: #777;
+    /* odległość między linijkami w tekście - wazne */
+    line-height: 1.4;
+}
+
+/* PORTFOLIO SECTION STYLE */
+
+.portfolio {
+    background-color: #f2f1ed;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-wrapper .portfolio-item {
+    flex-basis: 25%;
+    height: 200px;
+    position: relative;
+}
+
+.portfolio-wrapper .portfolio-item img {
+    /* dostosują sie do szerokosci kolumn zdefiniowanych wyzej */
+    width: 100%;
+    height: 100%;
+    /* obrazek wypełni cały kwadrat, nie bedzie rozciagany */
+    object-fit: cover;
+}
+
+.portfolio-wrapper .portfolio-item h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.8);
+    margin: 0;
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 3em;
+    /* ukrywamy bialy napis z tłem po najechaniu na fotkę */
+    opacity: 0;
+    transition: all .3s;
+}
+
+.portfolio-wrapper .portfolio-item h3:hover {
+    opacity: 1;
+}
+
+/* CONTACT SECTION STYLES */
+
+.contact form {
+    max-width: 700px;
+    margin: 40px auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact input[type="text"], .contact input[type="email"] {
+    flex-basis: 48%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.contact textarea {
+    flex-basis: 100%;
+    padding: 15px;
+    margin-bottom: 150px;
+    height: 100px;
+}
+
+.social-links {
+    margin-top: 75px;
+    text-align: center;
+}
+
+.social-links .social-link {
+    font-size: 2.5em;
+    color: #007bff;
+    transition: all .3s;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.social-links .social-link:hover {
+    color: #777;
+}
+
+/* main footer styles */
+.main-footer{
+background-color: #f2f1ed;
+padding: 30px;
+text-align: center;
+color: #777;
+}
