@@ -47,11 +47,11 @@ section {
     text-decoration: none;
     /* wielkie litery */
     text-transform: uppercase;
-    color: whitesmoke;
+    color:#333;
     border: 1px solid #007bff;
     padding: 10px 15px;
     /* aby po najechaniu zmieniał się napis */
-    transition: all 0.3;
+    transition: all 0.3s;
     /* powoduje, ze jest odstep pod paragrafami w sekcji 'o mnie' */
     display: inline-block;
     margin: auto;
@@ -63,6 +63,11 @@ section {
     /* na te kolory zmieni się po najechaniu na 'DOWIEDZ SIĘ WIĘCEJ ' */
     color: #fff;
     background-color: #007bff;
+}
+
+.btn-header {
+
+    color: whitesmoke;
 }
 
 .container {
